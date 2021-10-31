@@ -29,7 +29,7 @@ class _FavoriteWidgetState extends State<Budget> {
                   RadialAxis(
 
                     annotations: <GaugeAnnotation>[
-                      GaugeAnnotation(widget: Text('\$' + total.toInt().toString() + '/\$200 Budget', style: kTitleStyle,))
+                      GaugeAnnotation(widget: Text('\$' + total.toInt().toString() + '/\$100 Budget', style: kTitleStyle,))
                     ],
                     pointers: <GaugePointer>[
                       RangePointer(

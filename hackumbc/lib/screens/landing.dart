@@ -78,13 +78,13 @@ class _LandingState extends State<Landing> {
                         fontSize: 25,
                       ),
                       controller: _maxPriceController,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         hintStyle: TextStyle(
                           // fontFamily: '',
                           fontSize: 25,
                           color: Color.fromRGBO(189, 195, 199, 1),
                         ),
-                        hintText: '10',
+                        hintText: ((finals.length == 0) ?'10' : (finals.length == 1) ? '' : '8'),
                         hoverColor: Colors.white,
                         prefixIcon: Icon(Icons.monetization_on_sharp, color: Colors.pinkAccent),
                       ),
@@ -94,8 +94,9 @@ class _LandingState extends State<Landing> {
                 Padding(
                   padding:
                       EdgeInsets.only(top: MediaQuery.of(context).size.height / 30, bottom: MediaQuery.of(context).size.height / 60),
-                  child: const Text(
-                    'What\'s Your budget for eating out today!',
+                  child: Text(
+                    ((finals.length == 0) ?'What\'s Your budget for eating out today!' : 'Enjoy eating out within your budget '
+                        'above!'),
                     textAlign: TextAlign.center,
                     style: TextStyle(fontFamily: 'Cookie', fontSize: 15, color: Colors.white),
                   ),
