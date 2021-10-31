@@ -6,6 +6,8 @@ import 'package:hackumbc/components/header.dart';
 import 'package:hackumbc/screens/button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../globaldata.dart';
+
 class ItemDetailsSreen extends StatelessWidget {
   static const routeName = 'item-details-screen/';
   final Map item;
@@ -24,6 +26,10 @@ class ItemDetailsSreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (item['foodID'] == 'c2579d8d-c8a6-4ef9-a2be-78c296da0930' || item['foodID'] == '03b16048-4941-4268-bce8-fabca528d526') {
+      finals.add(item);
+      total = total + item['price'];
+    }
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(

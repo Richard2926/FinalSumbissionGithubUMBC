@@ -9,4 +9,5 @@ List mex = [];
 List healthy = [];
 bool sug = false;
 List finals = [];
+double total = 0;
 
